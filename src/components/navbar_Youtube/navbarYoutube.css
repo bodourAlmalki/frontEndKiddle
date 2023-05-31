@@ -1,0 +1,181 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* ---------------- Navbar and burger menu ------------------ */
+nav {
+  width: 100%;
+  height: 5em;
+  background-color: rgb(255, 180, 17);
+  display: flex;
+  justify-content: flex-start;
+  padding: 1em;
+}
+
+.burger-menu {
+  height: 100%;
+  width: 4em;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.burger-bar {
+  width: 4em;
+  height: 0.5em;
+  background-color: rgb(0, 183, 255);
+  border-radius: 0.5em;
+}
+
+.menu {
+  width: 50%;
+  height: 100vh;
+  background-color: rgb(154, 181, 240);
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  
+}
+
+/* ------------- sliding menu ------------------ */
+.hidden {
+  display: none;
+}
+
+.visible {
+  display: inherit;
+  padding-top: 4em;
+ 
+}
+
+/* ----- animations--------- */
+/* clicked */
+.burger-bar.clicked:nth-child(1) {
+  transform: rotate(45deg) translate(0.75em, 1.25em);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(2) {
+  transform: scale(0.1);
+  transition: ease-out 0.5s;
+}
+
+.burger-bar.clicked:nth-child(3) {
+  transform: rotate(135deg) translate(-0.5em, 1em);
+  transition: ease-out 0.5s;
+}
+
+/* unclicked */
+.burger-bar.unclicked {
+  transform: rotate(0) translate(0);
+  transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.5s;
+}
+
+
+
+/* -------Moav Button----------- */
+.btn-all-mobile {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+}
+
+.btn-R-mobile {
+  margin-bottom: 1em;
+  width: em;
+  height: 7vh;
+  background: rgb(194, 46, 150);
+  color: white;
+  border-radius: 45px;
+  border: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Rubik', sans-serif;
+}
+
+.btn-R-mobile:hover {
+  border: 3px solid rgb(194, 46, 150);
+  background: white;
+  color: rgb(194, 46, 150);
+  font-size: 1.5em;
+}
+
+/* ------------Logo--------------- */
+.kiddle-logo-mobile {
+  max-width:fit-content;
+  transform: rotateY(45deg);
+  margin-top: 2rem;
+  /* margin-left: 10rem; */
+  cursor: pointer;
+  transform: skew();
+}
+.kiddle-logo-mobile:hover {
+  transform: rotateY(45deg) scale(1.1);
+}
+
+/* -------------nav menu -------------- */
+.nav-menu-mobile {
+  display: grid;
+  grid-template-rows: repeat(6, auto);
+  grid-gap: 10px;
+  list-style: none;
+  align-items: center;
+  text-align: left;
+  justify-items: start;
+  /* margin-top: 1rem; */
+}
+
+.nav-menu-mobile > .nav-links {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 2rem;
+  white-space: nowrap;
+  font-family: 'Rubik', sans-serif;
+}
+
+.nav-menu-mobile > .nav-links i {
+  padding-right: 0.5rem;
+  padding-left: 0.5rem;
+}
+.nav-item-mobile {
+  padding: 1.5em;
+}
+.nav-item-mobile:hover {
+  background-color: rgb(0, 173, 237);
+}
+
+/* ----------------coin-------------------- */
+
+.div-coin-1 {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: rgb(194, 46, 150);
+  border-radius: 2rem;
+  justify-content: space-around;
+  width: 150px;
+  height: 7vh;
+  margin-left: 1em;
+}
+
+.icon-flip {
+  font-size: 3rem;
+  margin-top: 6rem;
+  margin-right: 1em;
+  color: rgb(255, 180, 17);
+  z-index: 999;
+}
+.coin-counter {
+  color: white;
+  font-weight: bold;
+  font-size: 3rem;
+}

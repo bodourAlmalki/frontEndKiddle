@@ -1,0 +1,74 @@
+/* Modal overlay */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Modal content */
+.modal-content-1{
+  position: relative;
+  background-color: #fff;
+  padding: 5rem;
+  border-radius: 3rem;
+  max-width: 50%;
+  margin: 0 auto;
+  text-align: center;
+  border: 5px solid #ffb411;
+
+}
+
+/* Modal title */
+.modal-content-1 h2 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+/* Modal message */
+.modal-content-1 p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+/* Modal buttons */
+.modal-content-1 div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.modal-content-1 button {
+  padding: 10px 20px;
+  font-size: 16px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.modal-content-1 button:first-child {
+  border:3px solid #0c420e;
+  color: #0c420e;
+}
+
+.modal-content-1 button:first-child:hover {
+  background-color: #0c420e;
+  box-shadow: 1px 1px 3rem #21ce27;
+  color:#fff;
+}
+
+.modal-content-1 button:last-child {
+  border:3px solid #a81106;
+  color: #a81106;
+}
+
+.modal-content-1 button:last-child:hover {
+  background-color: #a81106;
+  box-shadow: 1px 1px 3rem #d14c43;
+  color:#fff;
+}

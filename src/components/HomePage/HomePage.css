@@ -1,0 +1,231 @@
+html,
+body {
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+}
+/* -----------Sections------------------- */
+.one {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  width: 100%;
+  margin-top: 20vh;
+  background-color: #fff;
+  scroll-snap-align: start;
+}
+.two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 40vh;
+  margin-top: 8vh;
+  margin-bottom: 8vh;
+  background-color: #fff;
+  scroll-snap-align: start;
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+.three {
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
+  background-color: #fff;
+  scroll-snap-align: start;
+  transition: all 0.3s;
+}
+.four {
+  align-items: center;
+  height: 30vh;
+  margin-top: 10vh;
+  margin-bottom: 35vh;
+}
+/* ------------iframe------------------------ */
+.Wrapper-iframe {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3em auto;
+  position: relative;
+  border: 12px dotted rgb(255, 180, 17);
+}
+.container-iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 0;
+  padding-bottom: 56.25%; /* 720/1280*/
+}
+.container-iframe iframe {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+/* -------------Text------------------------ */
+.txt,
+.txt-2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(0, 173, 237);
+  text-shadow: 0 5px 15px rgb(255, 180, 17);
+}
+.txt-three {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(0, 173, 237);
+  margin-top: 1.5rem;
+  margin-bottom: 5vh;
+  text-shadow: 0 0 2px black;
+}
+.four_h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(0, 173, 237);
+  margin-bottom: 5vh;
+  text-shadow: 0 0 2px black;
+}
+
+/* ----------button------------------ */
+.p-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.btn-blue {
+  width: 10em;
+  height: 7vh;
+  background: rgb(0, 173, 237);
+  color: white;
+  border-radius: 45px;
+  border: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 550;
+  font-family: 'Rubik', sans-serif;
+}
+.btn-blue:hover {
+  border: 3px solid rgb(0, 173, 237);
+  background: white;
+  color: rgb(0, 173, 237);
+  font-size: 1.5rem;
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+.btn-blue-2 {
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 80%;
+  width: 10em;
+  height: 7vh;
+  background: rgb(0, 173, 237);
+  color: white;
+  border-radius: 45px;
+  border: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.5rem;
+  font-weight: 550;
+  font-family: 'Rubik', sans-serif;
+}
+.btn-blue-2:hover {
+  border: 3px solid rgb(0, 173, 237);
+  background: white;
+  color: rgb(0, 173, 237);
+  font-size: 1.5rem;
+  transform: scale(0.95);
+  transition: all 0.3s;
+}
+/* -------------Images-------------------- */
+.imeg-1,
+.imeg-2 {
+  margin-bottom: 2rem;
+}
+
+.img_div {
+  position: relative;
+}
+.img_div:hover {
+  flex-basis: 35%;
+}
+
+/* Responsive CSS */
+
+/* Mobile */
+@media (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .two,
+  .four {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  .Wrapper-iframe {
+    margin: 0;
+
+  }
+  .one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+  }
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+  }
+
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 2rem;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+
+  .imeg-1,
+  .imeg-2 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 2.5rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 3rem;
+  }
+}

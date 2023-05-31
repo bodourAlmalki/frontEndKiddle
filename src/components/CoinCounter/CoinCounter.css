@@ -1,0 +1,15 @@
+.coin {
+    display: flex;
+    align-items: center;
+    font-size: 3em;
+    color: #fff;
+    margin-left: .5em;
+  }
+  .coin-icon {
+    width: 24px;
+    height: 24px;
+
+    background-size: cover;
+    margin-right: 5px;
+
+  }

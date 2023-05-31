@@ -1,0 +1,88 @@
+@import '../../styles/vars.scss';
+
+.body-lesson {
+  background: linear-gradient(0deg, $primary 0.03%, $accent);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.lesson {
+  text-align: center;
+  // margin-top: 10vh;
+
+  .wrapper-iframe-lesson {
+    width: 50vw;
+    height: 60vh;
+    margin: 3em auto;
+    position: relative;
+    // background: linear-gradient(0deg, $primary 0.03%, $accent);
+    border: 10px solid #ffb411;
+    border-radius: 10px;
+  }
+
+  iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+h1,
+h3 {
+  color: $bg;
+  text-shadow: 0 5px 15px $foreground;
+  font-weight: 400;
+}
+.buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.btn-moove {
+  // margin-left: 1em;
+  width: 150px;
+  height: 7vh;
+  background: rgb(194, 46, 150);
+  color: white;
+  border-radius: 15px;
+  border: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Rubik', sans-serif;
+}
+.btn-moove-1 {
+  background: #ffb411;
+  color: white;
+  // margin-left: 1em;
+  width: 150px;
+  height: 7vh;
+  border-radius: 15px;
+  border: 0;
+  transition: all 0.3s;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 550;
+  font-family: 'Rubik', sans-serif;
+}
+.btn-moove-1:hover {
+  border: 3px solid #ffb411;
+  background: white;
+  color: #ffb411;
+  font-size: 1.5em;
+}
+.btn-moove:hover {
+  border: 3px solid rgb(194, 46, 150);
+  background: white;
+  color: rgb(194, 46, 150);
+  font-size: 1.5em;
+}
+.icon_Back {
+  margin-bottom: 100%;
+  // margin-right: 80%;
+}

@@ -1,0 +1,25 @@
+.icon-back-container {
+  display: flex;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  margin-bottom: 10rem;
+}
+.icon-back {
+  margin-left: -2em;
+  width: 4rem;
+  font-size: 2rem;
+  cursor: pointer;
+}
+.p-icon {
+  font-size: 1rem;
+  color: #fff;
+  margin-left: 7em;
+}
+
+.link {
+  text-decoration: none;
+}
