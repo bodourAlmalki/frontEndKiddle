@@ -3,8 +3,7 @@ import './login.scss';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import jwt_decode from 'jwt-decode';
-import { Container } from 'react-bootstrap';
-import IconBacktoHome from '../iconBacktoHome/iconBacktoHome';
+
 
 function Login({ cancel }) {
   const [passwordShown, setPasswordShown] = useState(false);

@@ -30,7 +30,7 @@ function Signup({ hello }) {
       const data = await response.data;
       // sessionStorage.setItem('token', data.token);
       sessionStorage.setItem('_id', data._id);
-      // sessionStorage.setItem('role', data.role);
+      sessionStorage.setItem('role', data.role);
       console.log(response.data);
       toast.success('Account created successfully!', {
         position: toast.POSITION.TOP_RIGHT,
