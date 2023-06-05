@@ -9,10 +9,10 @@ export default function Courses() {
   return (
     <>
       {!userId ? (
-        <div className='bigdiv'>
+        <div className="bigdiv">
           <h1 className="notloggedin">
             {' '}
-            Hi Genuious programmer... <br/> Please sign up <br />
+            Hi Genius programmer... <br /> Please sign up <br />
             in case you didn't sign up <br />
             or log in in case you already have signed up
             <br /> to access the courses{' '}
