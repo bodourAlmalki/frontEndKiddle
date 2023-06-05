@@ -78,7 +78,6 @@ export default function HomePageComponent() {
           <button className="btn-blue-2">Learn More</button>
         </Link>
       </section>
-      {/* <Cube /> */}
     </Container>
   );
 }

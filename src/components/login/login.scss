@@ -1,0 +1,243 @@
+/* login.css */
+@import '../../styles/vars.scss';
+.login-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(0deg, $primary 0.03%, $accent);
+  width: auto;
+}
+
+.login-card {
+  max-width: 27.125rem;
+  background-color: #00aeed00;
+  border-radius: 58px;
+  box-shadow: 10px 10px 31px #9f9f9f, -10px -10px 31px #ffffff;
+  padding: 3em;
+}
+#eye {
+  background: #fff;
+  color: #333333a1;
+  border-radius: 0px 5px 5px 0px;
+  float: right;
+  position: relative;
+  right: 9%;
+  top: -47px;
+  z-index: 5;
+
+  cursor: pointer;
+}
+#eye-sign {
+  background: #ffffff00;
+  color: #333333a1;
+  border-radius: 0px 5px 5px 0px;
+  float: right;
+  position: relative;
+  right: 8%;
+  top: -47px;
+  z-index: 5;
+}
+#user,
+#key {
+  color: #333333a1;
+  padding-right: 1em;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.h1-1 {
+  text-align: center;
+  font-size: 24px;
+  color: rgb(255, 180, 17);
+  text-shadow: 1px 5px 7px rgb(39, 38, 35);
+  margin-bottom: 20px;
+}
+
+input {
+  margin-bottom: 15px;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.login-btn {
+  background-color: rgb(255, 180, 17);
+  color: #ffffff;
+  border: none;
+  border-radius: 4px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+  color: #888888;
+}
+
+.p span {
+  color: rgb(255, 180, 17);
+  cursor: pointer;
+}
+
+/* signup.css */
+.signup-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #ffe6e6;
+}
+
+.signup-card {
+  width: 400px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.login-btn {
+  background-color: rgb(255, 180, 17);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  width: 50%;
+  margin: 0 auto;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* buttons hover */
+.login-btn:hover {
+  color: rgb(255, 180, 17);
+  background-color: #fff;
+  border: 2px solid rgb(255, 180, 17);
+  transform: translatey(10px);
+  box-shadow: none;
+}
+.login-btn-1 {
+  background-color: rgb(255, 180, 17);
+  color: #ffffff;
+  border: none;
+  border-radius: 30px;
+  padding: 10px;
+  width: 50%;
+  margin-inline: 5em;
+  cursor: pointer;
+  font-weight: bold;
+}
+/* buttons hover */
+.login-btn-1:hover {
+  color: rgb(255, 180, 17);
+  background-color: #fff;
+  border: 2px solid rgb(255, 180, 17);
+  transform: translatey(10px);
+  box-shadow: none;
+}
+
+.signup-btn a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.p {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 1em;
+  color: #fff;
+  font-weight: 500;
+}
+
+.p p {
+  cursor: pointer;
+  color: rgb(255, 180, 17);
+  font-weight: 700;
+  font-size: larger;
+}
+
+.p span {
+  color: #fff;
+  cursor: pointer;
+}
+.p span:hover {
+  color: rgb(255, 180, 17);
+  font-size: larger;
+}
+
+.p span p {
+  cursor: pointer;
+  color: rgb(255, 180, 17);
+}
+@media (max-width: 300px) {
+  .login-card {
+    width: 90vw;
+    padding: 10%;
+  }
+  input {
+    max-width: 11.125rem;
+  }
+  #eye {
+    float: right;
+    position: relative;
+    right: 15%;
+    top: -47px;
+  }
+}
+
+@media (min-width: 301px) and (max-width: 350px) {
+  .login-card {
+    width: 90vw;
+    padding: 10%;
+  }
+  input {
+    max-width: 12.125rem;
+  }
+  #eye {
+    float: right;
+    position: relative;
+    right: 11%;
+    top: -47px;
+  }
+}
+@media (min-width: 351px) and (max-width: 400px) {
+  .login-card {
+    width: 90vw;
+    padding: 10%;
+  }
+  input {
+    max-width: 13.2rem;
+  }
+  #eye {
+    float: right;
+    position: relative;
+    right: 19%;
+    top: -47px;
+  }
+}
+@media (min-width: 400px) and (max-width: 500px) {
+  .login-card {
+    width: 90vw;
+    padding: 10%;
+  }
+  input {
+    max-width: 16.2rem;
+  }
+  #eye {
+    float: right;
+    position: relative;
+    right: 15%;
+    top: -47px;
+  }
+}

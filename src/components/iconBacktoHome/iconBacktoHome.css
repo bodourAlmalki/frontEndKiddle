@@ -1,11 +1,11 @@
 .icon-back-container {
   display: flex;
   flex-direction: row;
-  justify-content:center;
+  justify-content:flex-start;
   align-items: center;
-  position: fixed;
-  top: 1rem;
-  left: 1rem;
+  position:absolute;
+  top: 2rem;
+  left: -2rem;
   margin-bottom: 10rem;
 }
 .icon-back {

@@ -1,6 +1,6 @@
 html,
 body {
-  margin: 0;
+  margin: 0 auto;
   font-family: 'Rubik', sans-serif;
 }
 /* -----------Sections------------------- */
@@ -11,7 +11,7 @@ body {
   align-items: center;
   height: 40vh;
   width: 100%;
-  margin-top: 20vh;
+  margin-top: 15vh;
   background-color: #fff;
   scroll-snap-align: start;
 }
@@ -40,9 +40,9 @@ body {
 }
 .four {
   align-items: center;
-  height: 30vh;
+  height: auto;
   margin-top: 10vh;
-  margin-bottom: 35vh;
+  /* margin-bottom: 35vh; */
 }
 /* ------------iframe------------------------ */
 .Wrapper-iframe {
@@ -123,7 +123,8 @@ body {
 .btn-blue-2 {
   margin-top: 5vh;
   margin-bottom: 5vh;
-  margin-left: 80%;
+  margin-left: 40%;
+
   width: 10em;
   height: 7vh;
   background: rgb(0, 173, 237);
@@ -160,22 +161,22 @@ body {
 /* Responsive CSS */
 
 /* Mobile */
-@media (max-width: 767px) {
+@media (max-width: 430px) {
   * {
     margin: 0;
     padding: 0;
   }
-  .two,
-  .four {
+  .two {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     height: fit-content;
+    width: 100%;
+    margin-bottom: 0;
   }
   .Wrapper-iframe {
     margin: 0;
-
   }
   .one {
     display: flex;
@@ -183,6 +184,133 @@ body {
     align-items: center;
     justify-content: center;
     height: fit-content;
+    margin-top: 0;
+  }
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+  }
+
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 2rem;
+    margin: 0;
+    text-align: center;
+    padding-bottom: 1rem;
+  }
+
+  .imeg-1,
+  .imeg-2 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    z-index: -2;
+  }
+  .btn-blue-2 {
+    margin-left: 30%;
+    width: 9rem;
+    font-size: 1.2rem;
+  }
+  .four {
+    margin-bottom: 0;
+  }
+}
+
+/* Tablet */
+@media (min-width: 431px) and (max-width: 767px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .two {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .Wrapper-iframe {
+    margin: 0;
+  }
+  .one {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    margin-top: 0;
+  }
+  .three {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    margin: 0;
+  }
+  .four {
+    margin-bottom: 0;
+  }
+
+  .txt,
+  .txt-2,
+  .txt-three,
+  .four_h2 {
+    font-size: 2.5rem;
+    margin: 0;
+    padding-bottom: 1rem;
+  }
+
+  .imeg-1,
+  .imeg-2 {
+    width: 100%;
+    height: auto;
+    align-items: center;
+    z-index: -2;
+  }
+  .btn-blue-2 {
+    align-items: center;
+    margin-left: 25%;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) and (max-width: 1023px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  .two {
+    display: flex;
+    row-gap: 1em;
+    flex-direction: row;
+    gap: 2em;
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    width: 100%;
+    /* margin-bottom: 0; */
+  }
+  .Wrapper-iframe {
+    margin: 0;
+  }
+  .one {
+    display: flex;
+    flex-direction: row;
+    gap: 2em;
+
+    align-items: center;
+    justify-content: space-between;
+    height: fit-content;
+    margin-top: 2rem;
   }
   .three {
     display: flex;
@@ -201,31 +329,33 @@ body {
     margin: 0;
     padding-bottom: 1rem;
   }
-
+  /* 
   .imeg-1,
   .imeg-2 {
     width: 100%;
     height: auto;
     align-items: center;
+    z-index: -2;
+  } */
+  .btn-blue-2 {
+    align-items: center;
+    margin-left: 1em;
   }
-}
 
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
   .txt,
   .txt-2,
   .txt-three,
   .four_h2 {
-    font-size: 2.5rem;
+    /* font-size: 3rem; */
+  }
+  .btn-blue-2 {
+    margin-left: 9em;
+  }
+  .four {
+    margin-bottom: 0;
   }
 }
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .txt,
-  .txt-2,
-  .txt-three,
-  .four_h2 {
-    font-size: 3rem;
-  }
+@media (min-width: 1024px) and (max-width: 1300px) {
+}
+@media (min-width: 1301px) {
 }

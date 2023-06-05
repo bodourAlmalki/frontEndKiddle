@@ -10,11 +10,9 @@ export default function CardCourse() {
   };
 
   return (
-    <div>
-      <div className="wrapper">
         <div className="cols">
           <div
-            className="col"
+            className="lol"
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardHover}
           >
@@ -36,7 +34,7 @@ export default function CardCourse() {
             </div>
           </div>
           <div
-            className="col"
+            className="lol"
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardHover}
           >
@@ -58,7 +56,7 @@ export default function CardCourse() {
             </div>
           </div>
           <div
-            className="col"
+            className="lol"
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardHover}
           >
@@ -80,7 +78,7 @@ export default function CardCourse() {
             </div>
           </div>
           <div
-            className="col"
+            className="lol"
             onMouseEnter={handleCardHover}
             onMouseLeave={handleCardHover}
           >
@@ -101,8 +99,6 @@ export default function CardCourse() {
               </div>
             </div>
           </div>
-        </div>
-      </div>
     </div>
   );
 }

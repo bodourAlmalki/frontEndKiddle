@@ -25,7 +25,7 @@ const Lessons_JavaScript_1 = () => {
           ></iframe>
           <div className="buttons">
             <Link to="/QuizJs_1" >
-              <button className="btn-moove" style={{marginLeft:'23rem'}}>Next</button>
+              <button className="btn-moove-s" >Next</button>
             </Link>
             <IconBacktoHome/>
           </div>

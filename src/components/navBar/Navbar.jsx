@@ -11,9 +11,10 @@ function Navbar() {
   return (
     <header className="container-header-1">
       <nav className="NavbarItems">
-        <div className="whole-logo">
+        <Link to="/">
+          {' '}
           <img src={logo} alt=" this is the logo" className="kiddle-logo"></img>
-        </div>
+        </Link>
         <ul className="nav-menu">
           {MenuData.map((item, index) => {
             return (
@@ -33,7 +34,7 @@ function Navbar() {
         <Link to="/signup">
           <button className="btn-R">Register</button>
         </Link>
-        <Link to="login">
+        <Link to="/login">
           <button className="btn-R">Log In</button>
         </Link>
         {/* <div className="div-coin-1">

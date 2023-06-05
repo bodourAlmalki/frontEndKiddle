@@ -19,7 +19,7 @@ const Lessons_Html_1 = () => {
           ></iframe>
           <div className="buttons">
             <Link to="/QuizHtml_1">
-              <button className="btn-moove" style={{ marginLeft: '23rem' }}>
+              <button className="btn-moove-s" >
                 Next
               </button>
             </Link>

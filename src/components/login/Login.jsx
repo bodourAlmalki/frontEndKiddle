@@ -1,30 +1,35 @@
-import React from 'react';
-import './login.css';
-import { useState } from 'react';
-import Signup from '../signup/Signup';
+import React, { useState } from 'react';
+import './login.scss';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import jwt_decode from 'jwt-decode';
+import { Container } from 'react-bootstrap';
+import IconBacktoHome from '../iconBacktoHome/iconBacktoHome';
 
 function Login({ cancel }) {
-  const [prvnxt, setPrvnxt] = useState(false);
-  const [error, setError] = useState('');
+  const [passwordShown, setPasswordShown] = useState(false);
 
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
 
-  function cancelToggle() {
-    cancel();
-  }
+  const togglePasswordVisibility = () => {
+    setPasswordShown(!passwordShown);
+  };
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     if (!email) {
-      setError('Email is required');
-    } else if (!password) {
-      setError('Password is required');
-    } else {
-      fetch('https://final-project-idzh.onrender.com/user/login', {
+      toast.error('Email is required');
+      return;
+    }
+
+    if (!password) {
+      toast.error('Password is required');
+      return;
+    }
+
+    try {
+      const response = await fetch('http://localhost:5000/user/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -33,73 +38,79 @@ function Login({ cancel }) {
           email,
           password,
         }),
-      })
-        .then((res) => {
-          if (!res.ok) {
-            toast.error('Invalid email or password !', {
-              position: toast.POSITION.TOP_RIGHT,
-            });
-            throw new Error('Invalid email or password');
-          }
-          return res.json();
-        })
-        .then((data) => {
-          // console.table(data);
+      });
 
-          const decodedToken = jwt_decode(data.token);
-
-          console.log('Hello ' + decodedToken.firstName);
-
-          window.localStorage.setItem('token', data.token);
-          window.localStorage.setItem('Role', decodedToken.role);
-          window.localStorage.setItem('id', decodedToken.userId);
-          window.localStorage.setItem('first name', decodedToken.firstName);
-          window.localStorage.setItem('last name', decodedToken.lastName);
-
-          window.localStorage.setItem('loggedIn', true);
-          if (localStorage.getItem('Role') === 'admin') {
-            window.location.href = '/dashboard';
-          } else if (localStorage.getItem('Role') === 'user') {
-            window.location.href = '/';
-          }
-        })
-        .catch((err) => {
-          toast.error('Invalid email or password !');
-          // setError(err.message);
+      if (!response.ok) {
+        toast.error('Invalid email or password!', {
+          position: toast.POSITION.TOP_RIGHT,
         });
+        throw new Error('Invalid email or password');
+      }
+
+      const data = await response.json();
+      const decodedToken = jwt_decode(data.token);
+
+      sessionStorage.setItem('_id', decodedToken.user_id);
+      sessionStorage.setItem('role', decodedToken.role);
+      window.location.href = '/courses';
+    } catch (error) {
+      toast.error('Invalid email or password!');
+      console.error(error);
     }
   };
 
-  function handleReg() {
-    setPrvnxt(true);
-  }
+  const handleReg = () => {
+    window.location.href = '/signup';
+  };
 
-  function handleLog() {
-    setPrvnxt(false);
-  }
+  const cancelToggle = () => {
+    cancel();
+  };
 
   return (
     <>
       <ToastContainer />
+
       <div className="login-wrapper">
-        <div className={prvnxt ? 'login-zi7o' : 'login-r'}>
+        <div className="login-r">
           <div className="login-card">
             <form className="login-form" onSubmit={handleSubmit}>
-              <h1>Login</h1>
-              <input
-                type="text"
-                name="email"
-                value={email}
-                placeholder="Your email"
-                onChange={(e) => setEmail(e.target.value)}
-              />
-              <input
-                type="password"
-                name="password"
-                value={password}
-                placeholder="Your password"
-                onChange={(e) => setPassword(e.target.value)}
-              />
+              <h1 className="h1-1">Login</h1>
+              <span className="input-item">
+                <i
+                  id="user"
+                  aria-hidden="true"
+                  className="fa fa-user-circle"
+                ></i>
+                <input
+                  type="text"
+                  name="email"
+                  value={email}
+                  placeholder="Your email"
+                  onChange={(e) => setEmail(e.target.value)}
+                  required
+                />{' '}
+              </span>
+              <span className="input-item">
+                <i id="key" aria-hidden="true" className="fa fa-key"></i>
+                <input
+                  type={passwordShown ? 'text' : 'password'}
+                  name="password"
+                  value={password}
+                  placeholder="Your password"
+                  onChange={(e) => setPassword(e.target.value)}
+                  required
+                />{' '}
+              </span>
+              <span onClick={togglePasswordVisibility}>
+                <i
+                  className="fa fa-eye"
+                  aria-hidden="true"
+                  type="button"
+                  id="eye"
+                ></i>
+              </span>
+
               <button className="login-btn" value="login" type="submit">
                 Submit
               </button>
@@ -108,10 +119,8 @@ function Login({ cancel }) {
               </p>
             </form>
           </div>
-          <div className="login-card" id="lol">
-            <Signup hello={handleLog} handleButtonClick={cancelToggle} />
-          </div>
         </div>
+        {/* <IconBacktoHome/> */}
       </div>
     </>
   );

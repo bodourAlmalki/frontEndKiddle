@@ -5,23 +5,17 @@ export const MenuData = [
     cName: 'nav-links',
     icon: 'fa-solid fa-house-user',
   },
-  {
-    title: 'contact',
-    url: '/Contact',
-    cName: 'nav-links',
-    icon: 'fa-solid fa-address-book',
-  },
+
   {
     title: 'why Kiddle',
-    url: '/AboutPage',
+    url: '/about',
     cName: 'nav-links',
     icon: 'fa-solid fa-circle-info',
   },
   {
     title: 'Services',
-    url: '/Coursespage',
+    url: '/courses',
     cName: 'nav-links',
     icon: 'fa-solid fa-briefcase',
   },
-
 ];

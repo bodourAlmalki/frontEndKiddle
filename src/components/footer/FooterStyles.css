@@ -2,8 +2,12 @@
 
 @media all and (min-width: 820px) {
   .footer-distributed {
+    background-image: url('../../Assets/wave\ \(1\).svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     display: flex;
-    background:  rgb(0, 173, 237);
+    /* background:  rgb(0, 173, 237); */
     box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
     justify-content: center;
     box-sizing: border-box;
@@ -14,21 +18,43 @@
     font: bold 16px sans-serif;
     padding: 10rem 50px;
   }
+  /* .logo-Footer {
+    width: 16rem;
+    height: 10vh;
+    margin-left: 0;
+    margin-bottom: 3rem;
+    transform: skewX(10deg);
+  } */
 
   .footer-distributed .footer-left {
-    width: 30% !important;
+    width: 100% !important;
   }
 }
 
 .footer-distributed {
-  background: #d0d0d0;
+  background: #f3f2f0;
   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-  margin-top: 5%;
+  /* margin-top: 5%; */
   box-sizing: border-box;
   width: 100%;
   text-align: left;
   font: bold 16px sans-serif;
   padding: 55px 50px;
+  background-image: url('../../Assets/wave\(3\).svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.logo-Footer {
+  width: 16rem;
+  height: 10vh;
+  margin-left: 0;
+  margin-bottom: 10rem;
+  transform: skewX(10deg);
+  cursor: pointer;
+}
+.logo-Footer:hover {
+  transform: skewX(5deg) scale(1.1);
 }
 
 .footer-distributed .footer-left,
@@ -124,6 +150,10 @@
   color: black;
   text-decoration: none;
 }
+.email{
+  display: flex;
+  align-items: center;
+}
 
 .footer-distributed .footer-links a:before {
   content: '|';
@@ -158,6 +188,7 @@
 
 .footer-distributed .footer-company-about span {
   display: block;
+
   color: black;
   font-size: 14px;
   font-weight: bold;
@@ -191,24 +222,19 @@
   .footer-distributed {
     font: bold 14px sans-serif;
   }
-
   .footer-distributed .footer-left,
   .footer-distributed .footer-center,
   .footer-distributed .footer-right {
     display: block;
     width: 100%;
-    margin-bottom: 40px;
+    /* margin-bottom: 40px; */
     text-align: center;
     align-items: center;
   }
 
-  .footer-distributed .footer-center i {
+  /* .footer-distributed .footer-center i {
     margin-left: 0;
-  }
-}
-.logo-Footer {
-  width: 250px;
-  height: 150px;
+  } */
 }
 
 .inf-links {

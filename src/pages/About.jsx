@@ -1,11 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import Footer from '../components/footer/Footer.js';
-import HomePageComponent from '../components/HomePage/HomePage';
+import React, { useEffect, useState } from 'react';
+import About from '../components/About/About';
+import Navbar_Youtube from '../components/navbar_Youtube/navbar_Youtube';
 import Navbar from '../components/navBar/Navbar';
-import NavbarMobile from '../components/navBar/NavbarMobile';
-import Navbar_Youtube from '../components/navbar_Youtube/navbar_Youtube.jsx';
+import Footer from '../components/footer/Footer';
 
-export default function HomePage() {
+export default function AboutPage() {
   const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
@@ -23,9 +22,9 @@ export default function HomePage() {
 
   return (
     <div>
-      {isMobile ? <Navbar_Youtube /> : <Navbar />}
-      <HomePageComponent />
-      <Footer />
+      {isMobile ? <Navbar_Youtube/> : <Navbar/>}
+      <About />
+      <Footer/>
     </div>
   );
 }

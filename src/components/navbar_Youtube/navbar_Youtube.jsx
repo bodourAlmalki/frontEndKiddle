@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import './navbarYoutube.css';
 import { Link } from 'react-router-dom';
@@ -24,19 +23,29 @@ const Navbar_Youtube = () => {
   };
 
   return (
-    <div style={{ width: '100%', height: '100vh' }}>
-      <nav>
-        <div className="burger-menu" onClick={updateMenu}>
+    <div style={{ width: '100%' }}>
+      <nav className="nav">
+        <div
+          className="d-flex justify-content-between ml-100 burger-menu"
+          onClick={updateMenu}
+        >
           <div className={burger_class}></div>
           <div className={burger_class}></div>
           <div className={burger_class}></div>
+        </div>
+        <div className="whole-logo_1">
+          <Link to="/">
+            <img
+              src={logo}
+              alt=" this is the logo"
+              className="kiddle-logo-mobile"
+            ></img>
+          </Link>
         </div>
       </nav>
 
-      <div className={menu_class}><div className="whole-logo">
-          <img src={logo} alt=" this is the logo" className="kiddle-logo-mobile"></img>
-        </div>
-        <ul className="nav-menu-mobile">
+      <div className={menu_class}>
+        <ul className="nav-menu-mobile-1">
           {MenuData.map((item, index) => {
             return (
               <div className="nav-item-mobile">
@@ -51,13 +60,15 @@ const Navbar_Youtube = () => {
           })}
         </ul>
         <div className="btn-all-mobile">
-        <Link to="/signup">
-          <button className="btn-R-mobile">Register</button>
-        </Link>
-        <Link to="login">
-          <button className="btn-R-mobile">Log In</button>
-        </Link></div>
-    </div></div>
+          <Link to="/signup">
+            <button className="btn-R-mobile">Register</button>
+          </Link>
+          <Link to="/login">
+            <button className="btn-R-mobile">Log In</button>
+          </Link>
+        </div>
+      </div>
+    </div>
   );
 };
 

@@ -1,0 +1,115 @@
+.about-container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 10%;
+}
+.about_sec {
+  width: 100%;
+  height: fit-content;
+  column-gap: 3%;
+}
+.about_h1 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 5rem;
+  font-weight: 700;
+  color: rgb(0, 173, 237);
+  text-shadow: 0 5px 15px rgb(255, 180, 17);
+  text-align: center;
+  margin-block: revert;
+}
+.about_sologon {
+  text-align: center;
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  font-weight: 300;
+  color: rgb(0, 173, 237);
+  margin-block: revert;
+
+  text-shadow: 0 0 2px black;
+}
+.about_p {
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: black;
+  margin-block: revert;
+  /* text-shadow: 0 0 2px black; */
+  /* text-align: center; */
+}
+.about_h2 {
+  font-family: 'Rubik', sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgb(0, 173, 237);
+  text-shadow: 0 5px 15px rgb(255, 180, 17);
+  text-align: center;
+  margin-block: revert;
+}
+@media (max-width: 430px) {
+  .about_h1 {
+    font-size: 2rem;
+  }
+  .about_sologon {
+    font-size: 1.3rem;
+  }
+  .about_p {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+  .about_h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 431px) and (max-width: 767px) {
+  .about-container{
+    padding:5%;
+  }
+  .about_h1 {
+    font-size: 2rem;
+  }
+  .about_sologon {
+    font-size: 1.5rem;
+  }
+  .about_p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .about_h2 {
+    font-size: 1.4rem;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  /* .about-container{
+    padding:5%;
+  } */
+  .about_h1 {
+    font-size: 2rem;
+  }
+  .about_sologon {
+    font-size: 1.5rem;
+  }
+  .about_p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .about_h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1500px){
+  .about_h1 {
+    font-size: 2.5rem;
+  }
+  .about_sologon {
+    font-size: 1.5rem;
+  }
+  .about_p {
+    font-size: 1.3rem;
+    font-weight: 400;
+  }
+  .about_h2 {
+    font-size: 1.4rem;
+  }
+}
