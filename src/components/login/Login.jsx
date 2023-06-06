@@ -4,7 +4,6 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import jwt_decode from 'jwt-decode';
 
-
 function Login({ cancel }) {
   const [passwordShown, setPasswordShown] = useState(false);
 
