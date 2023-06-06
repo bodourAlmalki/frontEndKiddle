@@ -118,7 +118,6 @@ function Login({ cancel }) {
             </form>
           </div>
         </div>
-        {/* <IconBacktoHome/> */}
       </div>
     </>
   );
